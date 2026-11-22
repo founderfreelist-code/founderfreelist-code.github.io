@@ -102,5 +102,40 @@ Exact Use of the $1,000 Grant:
 <footer>FounderFreeList • Verified November 2026 • Independent directory for solo builders worldwide. Always verify final terms on official provider pages.</footer>
 </div>
   
-  
+  <script>
+const DB=[
+{c:'cash',n:'The Awesome Foundation',v:'$1,000 Cash',r:'Global (Inc. India)',e:'No LLC Needed',t:'Monthly micro-grant for creative, tech, and community projects. Individuals apply without incorporation.',u:'https://awesomefoundation.org'},
+{c:'cash',n:'Emergent Ventures',v:'$1K–$50K+ Grant',r:'Global (Inc. India)',e:'Individuals OK',t:'Fast-turnaround grants from Mercatus Center for solo builders working on high-impact zero-to-one ideas.',u:'https://mercatus.org'},
+{c:'cash',n:'1517 Fund Medici Project',v:'$1,000 Grant',r:'Global (Inc. India)',e:'No LLC Needed',t:'Designed for young or independent makers launching software, hardware, or community projects outside traditional paths.',u:'https://1517fund.com'},
+{c:'cash',n:'Mozilla Builders / Open Source',v:'$1K–$10K+ Grant',r:'Global (Inc. India)',e:'Individuals OK',t:'Periodic grants for solo developers building privacy-friendly, AI, or open-source web utilities.',u:'https://mozilla.org'},
+{c:'cash',n:'GitHub Sponsors & Open Collective',v:'Ongoing Grants',r:'Global (Inc. India)',e:'Individuals OK',t:'Receive direct recurring micro-grants and sponsorships from users and tech companies for open tools.',u:'https://github.com'},
+{c:'cash',n:'Antler Pre-Seed Stipends',v:'Varies by Region',r:'Global / India Cohorts',e:'Pre-Incorporation OK',t:'Regional founder residency stipends that fund solo builders before forming a company.',u:'https://antler.co'},
+{c:'cash',n:'Amber Grant for Women',v:'$10,000 Cash',r:'US & Canada Only',e:'No LLC Needed ($15 Fee)',t:'Monthly grant for solo women founders. Note: Restricted to US/Canada and charges a $15 admin fee.',u:'https://ambergrantsforwomen.com'},
+{c:'cloud',n:'Microsoft Founders Hub',v:'Up to $150K Credits',r:'Global (Inc. India)',e:'Idea Stage: No LLC',t:'Starts with $1,000+ Azure & OpenAI credits for solo idea-stage builders; higher tiers require registered entity.',u:'https://microsoft.com'},
+{c:'cloud',n:'Google for Startups Cloud',v:'Up to $2,000 Credits',r:'Global (Inc. India)',e:'Start Tier: Bootstrapped',t:'Cloud and Firebase credits under the Start tier for self-funded early projects with a live site.',u:'https://google.com'},
+{c:'cloud',n:'AWS Activate Founders',v:'$1,000 Credits',r:'Global (Inc. India)',e:'Self-Funded Tier',t:'Free AWS cloud hosting and AI credits for bootstrapped founders; apply with a live project website.',u:'https://amazon.com'},
+{c:'cloud',n:'Cloudflare Pages & Workers',v:'$0 Forever Free',r:'Global (Inc. India)',e:'No LLC Needed',t:'Unlimited static site bandwidth and serverless functions at $0/month—ideal for directories and MVPs.',u:'https://cloudflare.com'},
+{c:'cloud',n:'Oracle Cloud Always Free',v:'$0 Forever Free',r:'Global (Inc. India)',e:'No LLC Needed',t:'Free ARM virtual servers and autonomous databases with no expiration date.',u:'https://oracle.com'},
+{c:'cloud',n:'Supabase Free Tier',v:'$0 Free Tier',r:'Global (Inc. India)',e:'No LLC Needed',t:'Open-source Postgres database, user authentication, and storage for up to 2 active solo projects.',u:'https://supabase.com'},
+{c:'cloud',n:'Vercel Hobby Tier',v:'$0 Free Tier',r:'Global (Inc. India)',e:'Individuals Only',t:'Fast frontend deployment and edge hosting for personal and non-commercial MVP projects.',u:'https://vercel.com'},
+{c:'cloud',n:'Netlify Starter Tier',v:'$0 Free Tier',r:'Global (Inc. India)',e:'No LLC Needed',t:'Free static hosting with built-in form handling for waitlists and user feedback.',u:'https://netlify.com'},
+{c:'cloud',n:'MongoDB Atlas Free Tier',v:'$0 Free Tier',r:'Global (Inc. India)',e:'No LLC Needed',t:'512MB shared cloud database cluster ideal for lightweight mobile or web prototypes.',u:'https://mongodb.com'}
+let cat='all',saved=JSON.parse(localStorage.getItem('ffl_save')||'[]');
+function setCat(c,el){cat=c;document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));el.classList.add('active');render();}
+function toggleSave(n){saved=saved.includes(n)?saved.filter(x=>x!==n):[...saved,n];localStorage.setItem('ffl_save',JSON.stringify(saved));render();}
+function render(){
+const q=document.getElementById('q').value.toLowerCase();
+const list=DB.filter(x=>(cat==='all'||(cat==='saved'?saved.includes(x.n):x.c===cat))&&(!q||[x.n,x.v,x.r,x.e,x.t].join(' ').toLowerCase().includes(q)));
+document.getElementById('grid').innerHTML=list.map(x=>`<div class="card"><div><div class="ctop"><h3>${x.n}</h3><span class="val ${x.c==='cash'?'cash':''}">${x.v}</span></div><div class="meta"><span class="pill-m">${x.r}</span><span class="pill-m">${x.e}</span></div><p class="tip">${x.t}</p></div><div class="cfoot"><a class="apply" href="${x.u}" target="_blank" rel="noopener">Official Link →</a><button class="save ${saved.includes(x.n)?'on':''}" onclick="toggleSave('${x.n.replace(/'/g,"\\'")}')">${saved.includes(x.n)?'★ Saved':'☆ Save'}</button></div></div>`).join('')||'<p class="tip">No matching programs found.</p>';
+document.querySelectorAll('.card').forEach((c,i)=>setTimeout(()=>c.classList.add('show'),i*25));
+}
+function cp(id,btn){navigator.clipboard.writeText(document.getElementById(id).innerText);btn.innerText='Copied!';setTimeout(()=>btn.innerText='Copy Template',1500);}
+function saveChk(){const v=[...document.querySelectorAll('.chk input')].map(c=>c.checked);localStorage.setItem('ffl_chk',JSON.stringify(v));}
+(function(){
+const v=JSON.parse(localStorage.getItem('ffl_chk')||'[]');document.querySelectorAll('.chk input').forEach((c,i)=>c.checked=!!v[i]);
+let a=0,b=0,t=setInterval(()=>{a=Math.min(180,a+9);b=Math.min(33,b+2);document.getElementById('s1').innerText='$'+a+'K+';document.getElementById('s2').innerText=b;if(a>=180&&b>=33)clearInterval(t);},35);
+render();
+})();
+</script></body></html>
+
 
