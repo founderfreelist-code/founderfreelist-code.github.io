@@ -27,6 +27,80 @@ h1{font-size:clamp(26px,5.5vw,44px);font-weight:800;letter-spacing:-.8px;line-he
 .tab{background:#131c31;color:var(--muted);border:1px solid var(--border);padding:7px 13px;border-radius:8px;font-size:12.5px;font-weight:600;cursor:pointer;transition:.2s}
 .tab.active,.tab:hover{background:var(--emerald);color:#04130d;border-color:var(--emerald)}
 </style>
+<style>
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px;margin-bottom:34px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;opacity:0;transform:translateY(16px)}
+.card.show{opacity:1;transform:translateY(0)}
+.card:hover{transform:translateY(-4px);border-color:var(--cyan);box-shadow:0 12px 28px rgba(0,0,0,.45)}
+.ctop{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:8px}
+.ctop h3{font-size:16px;font-weight:700;color:#fff}
+.val{background:rgba(16,185,129,.14);color:var(--emerald);font-size:12px;font-weight:700;padding:3px 9px;border-radius:6px;white-space:nowrap}
+.val.cash{background:rgba(245,158,11,.16);color:var(--amber)}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;font-size:11px}
+.pill-m{background:#162038;color:#cbd5e1;padding:2px 8px;border-radius:5px;border:1px solid #243252}
+.tip{font-size:13px;color:var(--muted);margin-bottom:14px}
+.cfoot{display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid rgba(30,41,59,.7)}
+.apply{color:var(--cyan);font-size:13px;font-weight:700;text-decoration:none}
+.save{background:none;border:1px solid var(--border);color:var(--muted);padding:4px 10px;border-radius:6px;font-size:12px;cursor:pointer}
+.save.on{border-color:var(--amber);color:var(--amber)}
+.box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:24px}
+.box h2{font-size:19px;margin-bottom:6px;color:#fff}
+.chk{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid rgba(30,41,59,.6);font-size:13.5px;cursor:pointer}
+.chk input{accent-color:var(--emerald);width:17px;height:17px}
+pre{background:#060913;border:1px solid var(--border);padding:14px;border-radius:10px;font-size:13px;color:#e2e8f0;white-space:pre-wrap;margin:10px 0;font-family:inherit}
+.copy{background:var(--cyan);color:#04131a;border:none;padding:7px 14px;border-radius:8px;font-size:12.5px;font-weight:700;cursor:pointer}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:20px 0 30px;border-top:1px solid var(--border)}
+</style></head><body><div class="wrap">
+<header class="hero"><div class="glow"></div>
+<div class="badge">● 100% FREE VIP VAULT • VERIFIED NOV 2026</div>
+<h1>$0 Startup Credits &amp; Non-Repayable Grants for Solo Founders</h1>
+<p class="sub">No paywalls, no fluff. Verified cloud credits, cash micro-grants, country/India rules, LLC requirements, and copy-paste 150-word pitch templates.</p>
+<div class="stats">
+<div class="stat"><b id="s1">$0</b><span>Total Credit Value</span></div>
+<div class="stat"><b id="s2">0</b><span>Verified Programs</span></div>
+<div class="stat"><b>100%</b><span>Free Access</span></div>
+</div></header>
+<div class="bar">
+<input id="q" class="search" placeholder="Search by name, India, Global, AI, cash grant, no LLC..." oninput="render()">
+<div class="tabs">
+<button class="tab active" onclick="setCat('all',this)">All (33)</button>
+<button class="tab" onclick="setCat('cash',this)">Cash Grants (7)</button>
+<button class="tab" onclick="setCat('cloud',this)">Cloud &amp; AI (9)</button>
+<button class="tab" onclick="setCat('ops',this)">Docs &amp; Ops (7)</button>
+<button class="tab" onclick="setCat('growth',this)">Growth &amp; Design (10)</button>
+<button class="tab" onclick="setCat('saved',this)">★ Saved</button>
+</div></div><div id="grid" class="grid"></div>
+<section class="box"><h2>Solo Founder Grant Readiness Checklist</h2>
+<p class="tip">Complete these 4 steps before applying to boost your approval odds (progress saves automatically):</p>
+<label class="chk"><input type="checkbox" onchange="saveChk()"> Live project URL ready (e.g., https://github.io)</label>
+<label class="chk"><input type="checkbox" onchange="saveChk()"> Custom domain email set up (Zoho Mail Free Tier works at $0)</label>
+<label class="chk"><input type="checkbox" onchange="saveChk()"> 150-word plain-English pitch edited (no buzzwords or hype)</label>
+<label class="chk"><input type="checkbox" onchange="saveChk()"> Verified country &amp; fee rules (most are $0; Amber Grant has a $15 fee)</label>
+</section>
+<section class="box"><h2>Copy-Paste 150-Word Application Templates</h2>
+<p class="tip">Template 1: Startup Software &amp; AI Credits (Microsoft, AWS, Google, Notion)</p>
+<pre id="t1">Project Summary:
+I am building [Project Name], a focused web tool helping [target audience] solve [specific problem] without upfront overhead.
 
+Current Traction &amp; Solo Setup:
+Our live MVP is published at [Your Website URL] and actively serving early users. As an independent, bootstrapped builder, I ship weekly updates based on direct user feedback.
+
+How These Credits Will Be Used:
+Receiving [Provider Name] credits will directly power our cloud/AI infrastructure and let us scale reliably over the next 6–12 months. Thank you for supporting early-stage independent builders!</pre>
+<button class="copy" onclick="cp('t1',this)">Copy Credit Template</button>
+<p class="tip" style="margin-top:18px">Template 2: Non-Repayable Micro-Grants (Awesome Foundation, Emergent Ventures, 1517)</p>
+<pre id="t2">What I Am Building:
+[Project Name] is an accessible web resource helping [target audience] achieve [clear outcome] using simple tools from any phone or laptop.
+
+Why It Matters Now:
+Unlike bloated platforms, [Project Name] focuses on immediate, practical execution. Visitors are already using our live site at [Your Website URL] to take action.
+
+Exact Use of the $1,000 Grant:
+100% of this grant goes directly into growth: [$400 for domain/tool upgrades, $300 for free starter kits for 500 builders, and $300 for outreach]. With zero debt or equity strings, this micro-grant turns a working solo project into a sustainable resource.</pre>
+<button class="copy" onclick="cp('t2',this)">Copy Grant Template</button>
+</section>
+<footer>FounderFreeList • Verified November 2026 • Independent directory for solo builders worldwide. Always verify final terms on official provider pages.</footer>
+</div>
+  
   
 
