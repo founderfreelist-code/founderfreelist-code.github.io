@@ -1,151 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-	  <meta name="google-site-verification" content="f20kO1eYb4Q5tJI2qa77RuhGK7h7cHhLJfl6_lUe3Ms" />
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FounderFreeList — Verified $0 Startup Credits & Solo Grants</title>
-<style>
-  body { background: #0b1120; color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 0; padding: 20px; }
-  .container { max-width: 720px; margin: auto; }
-  .badge { display: inline-block; background: #0284c722; color: #38bdf8; border: 1px solid #0284c755; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; }
-  h1 { font-size: 28px; margin: 12px 0 8px; line-height: 1.2; }
-  .sub { color: #94a3b8; font-size: 15px; line-height: 1.5; margin-bottom: 18px; }
-  .safety { background: #064e3b44; border: 1px solid #05966966; color: #6ee7b7; padding: 12px 14px; border-radius: 10px; font-size: 13px; margin-bottom: 20px; }
-  .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
-  .fbtn { background: #1e293b; color: #cbd5e1; border: 1px solid #334155; padding: 8px 14px; border-radius: 20px; font-size: 13px; cursor: pointer; }
-  .fbtn.active { background: #38bdf8; color: #0b1120; font-weight: bold; border-color: #38bdf8; }
-  .card { background: #1e293b; border: 1px solid #334155; border-radius: 14px; padding: 18px; margin-bottom: 14px; }
-  .top-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
-  .title { font-size: 18px; font-weight: bold; color: #fff; }
-  .val { background: #22c55e22; color: #4ade80; padding: 4px 10px; border-radius: 8px; font-size: 13px; font-weight: bold; white-space: nowrap; }
-  .tag-row { margin: 8px 0; font-size: 12px; color: #38bdf8; }
-  .desc { color: #cbd5e1; font-size: 14px; line-height: 1.5; margin: 8px 0 14px; }
-  .btn { display: inline-block; background: #38bdf8; color: #0b1120; text-decoration: none; font-weight: bold; padding: 10px 16px; border-radius: 8px; font-size: 14px; }
-  .vip-box { background: linear-gradient(135deg, #1e1b4b, #312e81); border: 1px solid #6366f1; border-radius: 16px; padding: 22px; margin: 28px 0; text-align: center; }
-  .vip-box h2 { margin: 0 0 8px; font-size: 20px; color: #fff; }
-  .vip-box p { color: #c7d2fe; font-size: 14px; margin-bottom: 16px; }
-  .vip-btn { display: inline-block; background: #facc15; color: #0b1120; font-weight: bold; text-decoration: none; padding: 12px 22px; border-radius: 10px; font-size: 15px; }
-  footer { text-align: center; color: #64748b; font-size: 12px; margin-top: 30px; padding-bottom: 20px; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FounderFreeList — Verified $0 Startup Credits & Solo Grants (2026)</title>
+  <meta name="description" content="Curated directory of verified $0 software credits and non-repayable micro-grants for bootstrapped solo founders worldwide, with clear eligibility and country rules." />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background: #f8fafc; color: #0f172a; line-height: 1.55; padding: 20px 16px 60px; }
+    .container { max-width: 820px; margin: 0 auto; }
+    header { text-align: center; padding: 24px 0 20px; }
+    .badge { display: inline-block; background: #e0e7ff; color: #3730a3; font-weight: 700; font-size: 0.75rem; padding: 5px 12px; border-radius: 999px; letter-spacing: 0.04em; margin-bottom: 12px; }
+    h1 { font-size: 1.95rem; font-weight: 800; line-height: 1.2; margin-bottom: 12px; color: #0f172a; }
+    .subtitle { color: #475569; font-size: 1rem; max-width: 620px; margin: 0 auto 16px; }
+    .trust-banner { background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46; padding: 12px 16px; border-radius: 10px; font-size: 0.88rem; margin-bottom: 24px; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 32px; }
+    @media (min-width: 640px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+    .card h3 { font-size: 1.08rem; font-weight: 700; color: #0f172a; }
+    .amount { background: #dbeafe; color: #1e40af; font-weight: 700; font-size: 0.78rem; padding: 4px 9px; border-radius: 8px; white-space: nowrap; }
+    .amount.grant { background: #dcfce7; color: #166534; }
+    .meta-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+    .tag { background: #f1f5f9; color: #334155; font-size: 0.74rem; font-weight: 600; padding: 3px 8px; border-radius: 6px; }
+    .card p { font-size: 0.9rem; color: #475569; margin-bottom: 14px; }
+    .card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px; font-size: 0.78rem; color: #64748b; }
+    .btn-link { color: #2563eb; font-weight: 700; text-decoration: none; font-size: 0.88rem; }
+    .btn-link:hover { text-decoration: underline; }
+    .vip-box { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); color: #ffffff; border-radius: 16px; padding: 28px 22px; text-align: center; box-shadow: 0 10px 25px rgba(30,27,75,0.2); }
+    .vip-box h2 { font-size: 1.45rem; font-weight: 800; margin-bottom: 10px; }
+    .vip-box p { color: #e0e7ff; font-size: 0.95rem; margin-bottom: 14px; }
+    .vip-list { text-align: left; max-width: 540px; margin: 0 auto 18px; background: rgba(255,255,255,0.08); padding: 14px 18px; border-radius: 10px; font-size: 0.88rem; color: #f8fafc; list-style: none; }
+    .vip-list li { margin-bottom: 7px; }
+    .vip-btn { display: inline-block; background: #facc15; color: #0f172a; font-weight: 800; font-size: 1.02rem; padding: 14px 26px; border-radius: 10px; text-decoration: none; margin-top: 4px; }
+    footer { text-align: center; margin-top: 32px; font-size: 0.8rem; color: #64748b; }
+  </style>
 </head>
 <body>
 <div class="container">
-  <span class="badge">UPDATED FOR 2026 • NO LLC REQUIRED</span>
-  <h1>Verified $0 Startup Credits &amp; Solo Grants</h1>
-  <p class="sub">Stop paying full price for tools. Browse verified free software credits and non-repayable micro-grants you can claim as a solo builder.</p>
+  <header>
+    <span class="badge">UPDATED NOV 2026 • GLOBAL &amp; INDIA ELIGIBILITY SHOWN</span>
+    <h1>Verified $0 Startup Credits &amp; Solo Micro-Grants</h1>
+    <p class="subtitle">Stop wasting hours on expired perks. Browse verified software credits and non-repayable grants with clear country rules, eligibility conditions, and official links.</p>
+  </header>
 
-  <div class="safety">
-    🛡️ <strong>100% Official Links Only:</strong> Legitimate grants and credits never ask for upfront fees or bank passwords. Every link below goes straight to the official provider.
+  <div class="trust-banner">
+    🛡️ <strong>100% Official Links &amp; Transparent Rules:</strong> Every listing below states whether an LLC, working website, or specific country is required. Always review final terms on the provider's official page.
   </div>
 
-  <div class="filters">
-    <button class="fbtn active" onclick="filterCards('all', this)">All Offers (8)</button>
-    <button class="fbtn" onclick="filterCards('tools', this)">Free Software Credits</button>
-    <button class="fbtn" onclick="filterCards('cloud', this)">Cloud &amp; AI</button>
-    <button class="fbtn" onclick="filterCards('grant', this)">Cash Grants</button>
-  </div>
-
-  <div id="list">
-    <div class="card" data-cat="tools">
-      <div class="top-row"><span class="title">Notion for Startups</span><span class="val">Up to $6,000 Free</span></div>
-      <div class="tag-row">✓ Solo-Friendly • ✓ Website/Domain Needed</div>
-      <div class="desc">Get up to 6 months free of Notion Plus + AI to organize your entire solo business, docs, and product roadmap.</div>
-      <a class="btn" href="https://notion.so" target="_blank" rel="noopener">Claim Official Credit →</a>
+  <div class="grid">
+    <div class="card">
+      <div>
+        <div class="card-top">
+          <h3>Microsoft for Startups Founders Hub</h3>
+          <span class="amount">Up to $150k Credits</span>
+        </div>
+        <div class="meta-tags">
+          <span class="tag">🌍 Global (Inc. India)</span>
+          <span class="tag">💻 Software Credits</span>
+          <span class="tag">📋 Milestone-Based</span>
+        </div>
+        <p>Starts with $1,000 in Azure &amp; OpenAI credits for early builders; unlocking higher tiers ($5k–$150k) requires a registered business entity and product milestones.</p>
+      </div>
+      <div class="card-footer">
+        <span>Verified: Nov 2026</span>
+        <a class="btn-link" href="https://microsoft.com" target="_blank" rel="noopener">Official Program →</a>
+      </div>
     </div>
 
-    <div class="card" data-cat="cloud">
-      <div class="top-row"><span class="title">Microsoft for Startups Founders Hub</span><span class="val">Up to $150,000 Free</span></div>
-      <div class="tag-row">✓ No Funding Required • ✓ Open to Solo Builders</div>
-      <div class="desc">Includes free Azure cloud credits, OpenAI API credits, GitHub Enterprise, and LinkedIn tools—no investor backing needed.</div>
-      <a class="btn" href="https://microsoft.com" target="_blank" rel="noopener">Claim Official Credit →</a>
+    <div class="card">
+      <div>
+        <div class="card-top">
+          <h3>AWS Activate Founders</h3>
+          <span class="amount">$1,000 Credits</span>
+        </div>
+        <div class="meta-tags">
+          <span class="tag">🌍 Global (Inc. India)</span>
+          <span class="tag">💻 Cloud Credits</span>
+          <span class="tag">🌐 Live Website Needed</span>
+        </div>
+        <p>Designed for self-funded startups founded within the past 10 years. Requires a functioning company website, active AWS account, and non-generic domain email.</p>
+      </div>
+      <div class="card-footer">
+        <span>Verified: Nov 2026</span>
+        <a class="btn-link" href="https://amazon.com" target="_blank" rel="noopener">Official Program →</a>
+      </div>
     </div>
 
-    <div class="card" data-cat="cloud">
-      <div class="top-row"><span class="title">AWS Activate Founders</span><span class="val">$1,000 Free Credits</span></div>
-      <div class="tag-row">✓ Unfunded Startups Eligible • ✓ Fast Approval</div>
-      <div class="desc">Amazon's starter tier gives bootstrapped solo builders $1,000 in free cloud hosting and AI infrastructure credits.</div>
-      <a class="btn" href="https://amazon.com" target="_blank" rel="noopener">Claim Official Credit →</a>
+    <div class="card">
+      <div>
+        <div class="card-top">
+          <h3>Google for Startups Cloud Program</h3>
+          <span class="amount">Up to $2,000 Credits</span>
+        </div>
+        <div class="meta-tags">
+          <span class="tag">🌍 Global (Inc. India)</span>
+          <span class="tag">💻 Cloud &amp; AI</span>
+          <span class="tag">⚙️ Working MVP Needed</span>
+        </div>
+        <p>The Start tier offers up to $2,000 in Google Cloud &amp; Firebase credits over 2 years for bootstrapped startups with a working MVP, public website, and clear business model.</p>
+      </div>
+      <div class="card-footer">
+        <span>Verified: Nov 2026</span>
+        <a class="btn-link" href="https://google.com" target="_blank" rel="noopener">Official Program →</a>
+      </div>
     </div>
 
-    <div class="card" data-cat="tools">
-      <div class="top-row"><span class="title">HubSpot for Startups</span><span class="val">Up to 90% Off</span></div>
-      <div class="tag-row">✓ Free CRM Forever • ✓ Startup Discount Tier</div>
-      <div class="desc">Start with HubSpot's 100% free CRM, email marketing, and landing page tools, plus massive startup discounts as you grow.</div>
-      <a class="btn" href="https://hubspot.com" target="_blank" rel="noopener">Claim Official Credit →</a>
+    <div class="card">
+      <div>
+        <div class="card-top">
+          <h3>Notion for Startups</h3>
+          <span class="amount">Up to $6,000 Credits</span>
+        </div>
+        <div class="meta-tags">
+          <span class="tag">🌍 Global (Inc. India)</span>
+          <span class="tag">💻 Software Credits</span>
+          <span class="tag">🌐 Custom Domain Needed</span>
+        </div>
+        <p>Up to 6 months free of Notion Plus with unlimited AI for new workspaces using a custom company domain and active website (non-Gmail address required).</p>
+      </div>
+      <div class="card-footer">
+        <span>Verified: Nov 2026</span>
+        <a class="btn-link" href="https://notion.so" target="_blank" rel="noopener">Official Program →</a>
+      </div>
     </div>
 
-    <div class="card" data-cat="cloud">
-      <div class="top-row"><span class="title">Google for Startups Cloud Program</span><span class="val">Up to $2,000+ Free</span></div>
-      <div class="tag-row">✓ Bootstrapped Tier Available • ✓ Gemini &amp; Cloud</div>
-      <div class="desc">Covers Google Cloud hosting, Firebase, and AI tools for early-stage solo projects and bootstrapped websites.</div>
-      <a class="btn" href="https://google.com" target="_blank" rel="noopener">Claim Official Credit →</a>
+    <div class="card">
+      <div>
+        <div class="card-top">
+          <h3>HubSpot for Startups</h3>
+          <span class="amount">Free CRM + Discounts</span>
+        </div>
+        <div class="meta-tags">
+          <span class="tag">🌍 Global (Inc. India)</span>
+          <span class="tag">💻 Software Credits</span>
+          <span class="tag">✅ No LLC for Free Tier</span>
+        </div>
+        <p>100% free CRM, forms, and email marketing tools for any solo builder. Paid tier discounts (30%–90% off) require affiliation with an approved incubator or partner.</p>
+      </div>
+      <div class="card-footer">
+        <span>Verified: Nov 2026</span>
+        <a class="btn-link" href="https://hubspot.com" target="_blank" rel="noopener">Official Program →</a>
+      </div>
     </div>
 
-    <div class="card" data-cat="tools">
-      <div class="top-row"><span class="title">Cloudflare Pages &amp; Workers</span><span class="val">$0 Forever Free Tier</span></div>
-      <div class="tag-row">✓ No Credit Card Needed • ✓ Unlimited Bandwidth</div>
-      <div class="desc">Host unlimited static websites, directories, and global edge apps completely free without ever hitting bandwidth bills.</div>
-      <a class="btn" href="https://cloudflare.com" target="_blank" rel="noopener">Claim Official Credit →</a>
+    <div class="card">
+      <div>
+        <div class="card-top">
+          <h3>Cloudflare Pages &amp; Workers</h3>
+          <span class="amount">$0 Free Tier</span>
+        </div>
+        <div class="meta-tags">
+          <span class="tag">🌍 Global (Inc. India)</span>
+          <span class="tag">💻 Free Hosting</span>
+          <span class="tag">✅ No Credit Card</span>
+        </div>
+        <p>Free static site hosting (up to 500 builds/month) and 100,000 daily Worker requests with global CDN—ideal for solo builders launching MVPs with zero hosting bills.</p>
+      </div>
+      <div class="card-footer">
+        <span>Verified: Nov 2026</span>
+        <a class="btn-link" href="https://cloudflare.com" target="_blank" rel="noopener">Official Program →</a>
+      </div>
     </div>
 
-    <div class="card" data-cat="grant">
-      <div class="top-row"><span class="title">Awesome Foundation Micro-Grants</span><span class="val">$1,000 Cash Grant</span></div>
-      <div class="tag-row">✓ Non-Repayable Cash • ✓ Individuals Can Apply</div>
-      <div class="desc">Monthly $1,000 no-strings-attached grants awarded to creative, community, and solo tech projects worldwide.</div>
-      <a class="btn" href="https://awesomefoundation.org" target="_blank" rel="noopener">View Official Grant →</a>
+    <div class="card">
+      <div>
+        <div class="card-top">
+          <h3>Awesome Foundation Micro-Grants</h3>
+          <span class="amount grant">$1,000 Cash Grant</span>
+        </div>
+        <div class="meta-tags">
+          <span class="tag">🌍 Global / Local Chapters</span>
+          <span class="tag">💸 Cash Grant</span>
+          <span class="tag">✅ Individuals Can Apply</span>
+        </div>
+        <p>Monthly $1,000 non-repayable cash grants awarded by independent local and global chapters to creative, community, and solo tech projects—no LLC required.</p>
+      </div>
+      <div class="card-footer">
+        <span>Verified: Nov 2026</span>
+        <a class="btn-link" href="https://awesomefoundation.org" target="_blank" rel="noopener">Official Grant →</a>
+      </div>
     </div>
-
-    <div class="card" data-cat="grant">
-      <div class="top-row"><span class="title">Amber Grant for Women Entrepreneurs</span><span class="val">$10,000 Monthly Grant</span></div>
-      <div class="tag-row">✓ Simple Application • ✓ Solo Founders Welcome</div>
-      <div class="desc">Awards $10,000 every single month to women-owned small businesses and solo ideas—no complex business plan required.</div>
-      <a class="btn" href="https://ambergrantsforwomen.com" target="_blank" rel="noopener">View Official Grant →</a>
-    </div>
-  </div>
-
-      <div class="vip-box">
-    <h2>🔒 Unlock $150,000+ in Cloud Credits &amp; $7,000+ in Solo Cash Grants</h2>
-    <p>Stop paying full price for SaaS tools or getting auto-rejected from micro-grants. Get all <strong>32 verified no-LLC perks</strong> + <strong>exact 150-word copy-paste application templates</strong> that get solo builders approved fast.</p>
-    <p style="font-size: 0.9rem; opacity: 0.9;">⚡ <strong>Launch Batch Price: $19</strong> for the first 25 builders (goes up to $29 next batch).</p>
-            <a class="vip-btn" href="https://founderfreelist.gumroad.com/l/pomhhe"/l/pomhhe target="_blank" rel="noopener">Unlock Full VIP Vault ($19) →</a>
-
-
-    <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.8;">🛡️ 100% Verified Link Guarantee: Every perk is checked for solo builders + free lifetime updates included.</p>
-  </div>
-
-    
-    
-        
-
-     
-		
-  
-
-        
-
-        
-
-
-                   
-
-
-	</div>
-  <footer>
-    FounderFreeList • Curated for bootstrapped solo builders.<br>
-    Always verify eligibility terms directly on the official provider's website.
-  </footer>
-</div>
-
-<script>
-function filterCards(cat, btn) {
-  document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.card').forEach(c => {
-    c.style.display = (cat === 'all' || c.dataset.cat === cat) ? 'block' : 'none';
-  });
-}
-</script>
-</body>
-</html>
