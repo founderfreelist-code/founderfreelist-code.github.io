@@ -120,6 +120,25 @@ const DB=[
 {c:'cloud',n:'Vercel Hobby Tier',v:'$0 Free Tier',r:'Global (Inc. India)',e:'Individuals Only',t:'Fast frontend deployment and edge hosting for personal and non-commercial MVP projects.',u:'https://vercel.com'},
 {c:'cloud',n:'Netlify Starter Tier',v:'$0 Free Tier',r:'Global (Inc. India)',e:'No LLC Needed',t:'Free static hosting with built-in form handling for waitlists and user feedback.',u:'https://netlify.com'},
 {c:'cloud',n:'MongoDB Atlas Free Tier',v:'$0 Free Tier',r:'Global (Inc. India)',e:'No LLC Needed',t:'512MB shared cloud database cluster ideal for lightweight mobile or web prototypes.',u:'https://mongodb.com'}
+  ,{c:'ops',n:'Notion for Startups',v:'Up to $6,000 Credits',r:'Global (Inc. India)',e:'Custom Domain Email',t:'Up to 6 months free of Notion Plus + Unlimited AI. Apply using your project website and custom email.',u:'https://notion.so'},
+{c:'ops',n:'Linear for Startups',v:'Up to 6 Mos Free',r:'Global (Inc. India)',e:'Early-Stage Teams',t:'Fast issue tracking and product roadmap workspace free for up to 6 months for qualifying builders.',u:'https://linear.app'},
+{c:'ops',n:'Zoho Mail Forever Free',v:'$0 Forever Free',r:'Global (Inc. India)',e:'No LLC Needed',t:'Up to 5 custom-domain email addresses at $0—essential for looking official on startup credit forms.',u:'https://zoho.com'},
+{c:'ops',n:'Airtable Free Plan',v:'$0 Free Tier',r:'Global (Inc. India)',e:'No LLC Needed',t:'Relational spreadsheet databases for up to 1,000 records per base to track leads or directory listings.',u:'https://airtable.com'},
+{c:'ops',n:'Slack Free Plan',v:'$0 Free Tier',r:'Global (Inc. India)',e:'No LLC Needed',t:'Team messaging and app integrations with 90-day searchable message history at zero cost.',u:'https://slack.com'},
+{c:'ops',n:'Trello Free Plan',v:'$0 Free Tier',r:'Global (Inc. India)',e:'No LLC Needed',t:'Visual Kanban boards with unlimited cards and up to 10 boards per workspace.',u:'https://trello.com'},
+{c:'ops',n:'Coda Free Plan',v:'$0 Free Tier',r:'Global (Inc. India)',e:'No LLC Needed',t:'All-in-one collaborative docs, trackers, and lightweight apps for solo founders.',u:'https://coda.io'},
+{c:'growth',n:'HubSpot for Startups',v:'Free CRM / 90% Off',r:'Global (Inc. India)',e:'Bootstrapped Tier',t:'100% free CRM, forms, and landing pages forever, plus startup discounts on paid growth tiers.',u:'https://hubspot.com'},
+{c:'growth',n:'Beehiiv Launch Plan',v:'$0 up to 2,500 Subs',r:'Global (Inc. India)',e:'No LLC Needed',t:'Free newsletter publishing, custom website hosting, and analytics up to 2,500 subscribers.',u:'https://beehiiv.com'},
+{c:'growth',n:'MailerLite Free Plan',v:'$0 up to 1,000 Subs',r:'Global (Inc. India)',e:'No LLC Needed',t:'Free email automation, signup forms, and landing pages for up to 1,000 subscribers.',u:'https://mailerlite.com'},
+{c:'growth',n:'Brevo Free Plan',v:'300 Emails/Day Free',r:'Global (Inc. India)',e:'No LLC Needed',t:'Send up to 300 transactional or marketing emails per day to unlimited contacts at $0.',u:'https://brevo.com'},
+{c:'growth',n:'Tally.so Free Forms',v:'$0 Unlimited Forms',r:'Global (Inc. India)',e:'No LLC Needed',t:'Unlimited forms and unlimited submissions at $0—best tool for waitlists, surveys, and feedback.',u:'https://tally.so'},
+{c:'growth',n:'Google Search Console',v:'$0 Forever Free',r:'Global (Inc. India)',e:'No LLC Needed',t:'Track organic Google search rankings, indexing status, and free keyword clicks.',u:'https://google.com'},
+{c:'growth',n:'Canva Free Plan',v:'$0 Free Tier',r:'Global (Inc. India)',e:'No LLC Needed',t:'Create logos, social graphics, pitch decks, and lead-magnet PDFs for free.',u:'https://canva.com'},
+{c:'growth',n:'Figma Starter Plan',v:'$0 Free Tier',r:'Global (Inc. India)',e:'No LLC Needed',t:'Collaborative UI/UX wireframing and mobile/web prototyping at $0.',u:'https://figma.com'},
+{c:'growth',n:'Crisp Chat Free Plan',v:'$0 Free Tier',r:'Global (Inc. India)',e:'No LLC Needed',t:'Live website chat widget and shared inbox for up to 2 team seats.',u:'https://crisp.chat'},
+{c:'growth',n:'Calendly Free Plan',v:'$0 Free Tier',r:'Global (Inc. India)',e:'No LLC Needed',t:'Automated booking link for user discovery calls and client meetings.',u:'https://calendly.com'}
+];
+    
 let cat='all',saved=JSON.parse(localStorage.getItem('ffl_save')||'[]');
 function setCat(c,el){cat=c;document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));el.classList.add('active');render();}
 function toggleSave(n){saved=saved.includes(n)?saved.filter(x=>x!==n):[...saved,n];localStorage.setItem('ffl_save',JSON.stringify(saved));render();}
